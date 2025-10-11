@@ -1,16 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: "", password: "" });
 
-  const handleChange = (e) => {
+  const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Login Submitted:", formData);
+    // TODO: validate/authenticate
+    navigate("/invest");              // ✅ go to Investment page
   };
 
   return (
@@ -19,35 +20,20 @@ const LoginForm = () => {
         <h2 className="text-3xl font-bold mb-6">Login</h2>
 
         <form className="space-y-4" onSubmit={handleSubmit}>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-2 rounded bg-[#2a2a2a] text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-400"
-          />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={formData.password}
-            onChange={handleChange}
-            className="w-full p-2 rounded bg-[#2a2a2a] text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-400"
-          />
-          <button
-            type="submit"
-            className="w-full py-2 bg-indigo-500 hover:bg-indigo-600 rounded-md text-white font-semibold transition duration-200"
-          >
+          <input type="email" name="email" placeholder="Email"
+            value={formData.email} onChange={handleChange}
+            className="w-full p-2 rounded bg-[#2a2a2a] text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-400" />
+          <input type="password" name="password" placeholder="Password"
+            value={formData.password} onChange={handleChange}
+            className="w-full p-2 rounded bg-[#2a2a2a] text-white placeholder-gray-400 focus:ring-2 focus:ring-indigo-400" />
+          <button type="submit" className="w-full py-2 bg-indigo-500 hover:bg-indigo-600 rounded-md text-white font-semibold">
             Login
           </button>
         </form>
 
         <p className="mt-4 text-gray-400 text-sm">
           Don’t have an account?{" "}
-          <Link to="/signup" className="text-yellow-400 hover:underline">
-            Sign Up
-          </Link>
+          <Link to="/signup" className="text-yellow-400 hover:underline">Sign Up</Link>
         </p>
       </div>
     </div>
