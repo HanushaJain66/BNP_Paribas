@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
+    <div className="h-screen w-full flex flex-col items-center justify-center bg-gradient-to-r from-blue-500 to-cyan-500 text-white">
       <h1 className="text-5xl font-bold mb-4">📞 Contact Us</h1>
       <p className="text-lg max-w-md text-center mb-8">
         We'd love to hear from you! Fill out the form below or reach us directly

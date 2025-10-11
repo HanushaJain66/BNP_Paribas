@@ -7,8 +7,8 @@ import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col">
-      <Header />  
+    <div className="min-h-screen bg-amber-200 text-white flex flex-col">
+      <Header />  {/* Navbar */}
       <main className="flex-1 flex justify-center items-center">
         <Routes>
           <Route path="/" element={<Home />} />
