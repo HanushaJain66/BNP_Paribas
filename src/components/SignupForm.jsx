@@ -25,10 +25,10 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-start pt-28 pb-10 min-h-screen bg-gradient-to-r from-purple-600 to-indigo-600">
+    <div className="flex justify-center items-center pt-28 min-h-screen bg-transparent">
       <form
         onSubmit={handleSubmit}
-        className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-8 w-[800px] text-white"
+        className="bg-[#1c1c1c] text-white border border-gray-700 shadow-2xl rounded-2xl p-8 w-[600px]"
       >
         <h2 className="text-3xl font-bold text-center mb-6">Sign Up</h2>
 
@@ -41,7 +41,7 @@ const SignupForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="p-2 rounded bg-white/20 focus:ring-2 focus:ring-indigo-400 placeholder-gray-200 w-full"
+            className="p-2 rounded bg-[#2a2a2a] focus:ring-2 focus:ring-indigo-400 placeholder-gray-400 w-full"
           />
 
           <input
@@ -51,7 +51,7 @@ const SignupForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="p-2 rounded bg-white/20 focus:ring-2 focus:ring-indigo-400 placeholder-gray-200 w-full"
+            className="p-2 rounded bg-[#2a2a2a] focus:ring-2 focus:ring-indigo-400 placeholder-gray-400 w-full"
           />
 
           <input
@@ -60,7 +60,7 @@ const SignupForm = () => {
             placeholder="Phone Number"
             value={formData.phone}
             onChange={handleChange}
-            className="p-2 rounded bg-white/20 focus:ring-2 focus:ring-indigo-400 placeholder-gray-200 w-full"
+            className="p-2 rounded bg-[#2a2a2a] focus:ring-2 focus:ring-indigo-400 placeholder-gray-400 w-full"
           />
 
           <input
@@ -69,14 +69,14 @@ const SignupForm = () => {
             placeholder="Age"
             value={formData.age}
             onChange={handleChange}
-            className="p-2 rounded bg-white/20 focus:ring-2 focus:ring-indigo-400 placeholder-gray-200 w-full"
+            className="p-2 rounded bg-[#2a2a2a] focus:ring-2 focus:ring-indigo-400 placeholder-gray-400 w-full"
           />
 
           <select
             name="gender"
             value={formData.gender}
             onChange={handleChange}
-            className="p-2 rounded bg-white/20 focus:ring-2 focus:ring-indigo-400 w-full"
+            className="p-2 rounded bg-[#2a2a2a] focus:ring-2 focus:ring-indigo-400 w-full"
           >
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -90,7 +90,7 @@ const SignupForm = () => {
             value={formData.password}
             onChange={handleChange}
             required
-            className="p-2 rounded bg-white/20 focus:ring-2 focus:ring-indigo-400 placeholder-gray-200 w-full"
+            className="p-2 rounded bg-[#2a2a2a] focus:ring-2 focus:ring-indigo-400 placeholder-gray-400 w-full"
           />
 
           <input
@@ -99,7 +99,7 @@ const SignupForm = () => {
             placeholder="Account Details"
             value={formData.account_details}
             onChange={handleChange}
-            className="p-2 rounded bg-white/20 focus:ring-2 focus:ring-indigo-400 placeholder-gray-200 w-full"
+            className="p-2 rounded bg-[#2a2a2a] focus:ring-2 focus:ring-indigo-400 placeholder-gray-400 w-full"
           />
 
           <input
@@ -108,16 +108,15 @@ const SignupForm = () => {
             placeholder="Pancard Number"
             value={formData.pancard_number}
             onChange={handleChange}
-            className="p-2 rounded bg-white/20 focus:ring-2 focus:ring-indigo-400 placeholder-gray-200 w-full"
+            className="p-2 rounded bg-[#2a2a2a] focus:ring-2 focus:ring-indigo-400 placeholder-gray-400 w-full"
           />
 
           <div>
-            <label className="block text-sm mb-1">Preferred Currency</label>
             <select
               name="preferred_currency"
               value={formData.preferred_currency}
               onChange={handleChange}
-              className="p-2 rounded bg-white/20 focus:ring-2 focus:ring-indigo-400 w-full"
+              className="p-2 rounded bg-[#2a2a2a] focus:ring-2 focus:ring-indigo-400 w-full"
             >
               <option value="USD">USD</option>
               <option value="INR">INR</option>
@@ -126,12 +125,11 @@ const SignupForm = () => {
           </div>
 
           <div>
-            <label className="block text-sm mb-1">Risk Profile</label>
             <select
               name="risk_profile"
               value={formData.risk_profile}
               onChange={handleChange}
-              className="p-2 rounded bg-white/20 focus:ring-2 focus:ring-indigo-400 w-full"
+              className="p-2 rounded bg-[#2a2a2a] focus:ring-2 focus:ring-indigo-400 w-full"
             >
               <option value="low">Low</option>
               <option value="medium">Medium</option>
@@ -146,6 +144,13 @@ const SignupForm = () => {
         >
           Create Account
         </button>
+
+        <p className="text-center mt-4 text-sm text-gray-400">
+          Already have an account?{" "}
+          <span className="text-yellow-400 cursor-pointer hover:underline">
+            Login
+          </span>
+        </p>
       </form>
     </div>
   );

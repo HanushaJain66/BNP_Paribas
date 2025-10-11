@@ -50,7 +50,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-600 to-gray-700 shadow-amber-50">
+    <header className="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-gray-800 to-gray-900 shadow-lg">
       <div className="flex justify-between items-center px-6 py-3">
         {/* LEFT: Logo */}
         <Link to="/">
