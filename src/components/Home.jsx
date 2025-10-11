@@ -1,5 +1,5 @@
 // src/components/Home.jsx
-import { Link } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import { TrendingUp, PieChart, Shield } from "lucide-react";
 
 export default function Home() {
@@ -21,12 +21,12 @@ export default function Home() {
          
           <div className="flex gap-4">
             
-            <Link
+            <NavLink
               to="/login"
               className="border bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold active:scale-95  transition"
             >
               Sign Up / Login
-            </Link>
+            </NavLink>
           </div>
         </div>
 

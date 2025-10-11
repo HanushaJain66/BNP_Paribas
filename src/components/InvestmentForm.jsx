@@ -28,7 +28,7 @@ export default function InvestmentForm() {
       returnPct: values.returnPct ? Number(values.returnPct) : 0,
     };
 
-    // Go to /report and pass the inputs
+    
     navigate("/report", { state: payload });
   };
 
@@ -49,9 +49,9 @@ export default function InvestmentForm() {
           </p>
         </div>
 
-        {/* Grid */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Amount */}
+        
           <div className="relative">
             <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-indigo-600" />
             <input
@@ -67,7 +67,7 @@ export default function InvestmentForm() {
             <p className="mt-1 text-xs text-slate-500">Investment Amount</p>
           </div>
 
-          {/* Tenure */}
+        
           <div className="relative">
             <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-indigo-600" />
             <input
@@ -83,7 +83,7 @@ export default function InvestmentForm() {
             <p className="mt-1 text-xs text-slate-500">Investment Tenure (Years)</p>
           </div>
 
-          {/* Risk */}
+     
           <div className="relative">
             <Shield className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-purple-600" />
             <select
@@ -99,7 +99,7 @@ export default function InvestmentForm() {
             <p className="mt-1 text-xs text-slate-500">Risk Profile</p>
           </div>
 
-          {/* Expected Return */}
+        
           <div className="relative">
             <LineChart className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-sky-600" />
             <input
@@ -116,7 +116,7 @@ export default function InvestmentForm() {
           </div>
         </div>
 
-        {/* Submit */}
+     
         <button
           type="submit"
           className="mt-8 w-full rounded-xl bg-indigo-600 text-white font-semibold py-3 shadow-md transition hover:bg-indigo-700 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
@@ -124,7 +124,7 @@ export default function InvestmentForm() {
           Generate Portfolio
         </button>
 
-        {/* Footer */}
+       
         <p className="text-center text-xs text-slate-400 mt-8">
           © {new Date().getFullYear()} AI Driven Returns Optimizer
         </p>

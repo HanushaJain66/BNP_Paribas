@@ -7,7 +7,8 @@ import Contact from "./components/Contact";
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
 import InvestmentForm from "./components/InvestmentForm";
-import InvestmentReport from  "./components/InvestmentReport";// <-- create this file
+import InvestmentReport from  "./components/InvestmentReport";
+import ChatWidget from "./components/chat/ChatWidget";  
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
            <Route path="/report" element={<InvestmentReport />} />
         </Routes>
       </main>
+      <ChatWidget />
     </div>
   );
 }
